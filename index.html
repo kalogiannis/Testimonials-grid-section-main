@@ -57,12 +57,22 @@
     }
 
     .header {
+      position: relative; /* Add this */
       display: flex;
       gap: 20px;
       margin-bottom: 20px;
       align-items: center;
     }
 
+    .quote {
+      border: none !important; /* Remove the border */
+      border-radius: 0; /* Make it a rectangle */
+      position: absolute;
+      right: 30px; /* Adjust based on padding */
+      top: 30px; /* Adjust based on padding */
+      width: 40px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
     .daniel .header,
     .daniel p,
     .daniel h2 {
@@ -72,8 +82,6 @@
     h2 {
       margin-bottom: 20px;
     }
-
-
 
     .jonathan {
       background-color: hsl(217, 19%, 35%);
@@ -88,8 +96,6 @@
     .jonathan h2 {
       color: hsl(0, 0%, 81%)
     }
-
-
 
     .jeanette,
     .kira {
@@ -110,9 +116,6 @@
       color: hsl(219, 29%, 14%)
     }
 
-
-
-
     .patrick {
       background-color: hsl(219, 29%, 14%)
     }
@@ -127,20 +130,17 @@
       color: hsl(214, 17%, 92%)
     }
 
-
     main>div {
       margin-bottom: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
-
 
     @media only screen and (min-width: 700px) {
       main {
         display: grid;
         gap: 10px;
         height: 100vh;
-        grid-template-columns: repaet(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
       }
 
@@ -155,7 +155,7 @@
       }
 
       .kira {
-        grid-column: 3/4;
+        grid-column: 4/5;
         grid-row: 1/3;
       }
 
@@ -165,7 +165,7 @@
       }
 
       .patrick {
-        grid-column: 2/3;
+        grid-column: 2/4;
         grid-row: 2/3;
       }
     }
@@ -179,9 +179,10 @@
       <div class="header">
         <img src="./images/image-daniel.jpg" alt="">
         <div>
-          <h4>Daniel Clifford</h4>
+          <h3>Daniel Clifford</h3>
           <p>Verified Graduate</p>
         </div>
+        <img class="quote" src="./images/bg-pattern-quotation.svg" alt="">
       </div>
       <h2>I received a job offer mid-course, and the subjects I learned were current, if not more so,in the company I
         joined. I honestly feel I got every penny’s worth.</h2>
@@ -197,7 +198,7 @@
       <div class="header">
         <img src="./images/image-jonathan.jpg" alt="">
         <div>
-          <h4>Jonathan Walters</h4>
+          <h3>Jonathan Walters</h3>
           <p>Verified Graduate</p>
         </div>
       </div>
@@ -212,7 +213,7 @@
       <div class="header">
         <img src="./images/image-jeanette.jpg" alt="">
         <div>
-          <h4>Jeanette Harmon</h4>
+          <h3>Jeanette Harmon</h3>
           <p>Verified Graduate</p>
         </div>
       </div>
@@ -226,7 +227,7 @@
       <div class="header">
         <img src="./images/image-patrick.jpg" alt="">
         <div>
-          <h4>Patrick Abrams</h4>
+          <h3>Patrick Abrams</h3>
           <p>Verified Graduate</p>
         </div>
       </div>
@@ -244,7 +245,7 @@
       <div class="header">
         <img src="./images/image-kira.jpg" alt="">
         <div>
-          <h4> Kira Whittle</h4>
+          <h3> Kira Whittle</h3>
           <p>Verified Graduate</p>
         </div>
       </div>
